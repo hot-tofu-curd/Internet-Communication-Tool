@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF5CD2D4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="361*"/>
+            <ColumnDefinition Width="433*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="OutPutTextBox" HorizontalAlignment="Left" Height="80" Margin="10,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" Grid.ColumnSpan="2"/>
+        <Button x:Name="SenderButton" Content="发送" HorizontalAlignment="Left" VerticalAlignment="Top" Width="774" Margin="10,355,0,0" Background="#FFF08A8A" Click="Sender_Click" Grid.ColumnSpan="2" />
+        <TextBox x:Name="InPutTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="140" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" Grid.ColumnSpan="2" />
+        <TextBox x:Name="IpTextBox" HorizontalAlignment="Left" Height="23" Margin="80,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="PortTextBox" HorizontalAlignment="Left" Height="23" Margin="312,7,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" Grid.ColumnSpan="2" />
+        <Button Content="开始监听端口" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Margin="95.2,71,0,0" Click="Listen_Click" Grid.Column="1"/>
+        <TextBox x:Name="StateTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="49" Margin="95.2,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="状态栏：" VerticalAlignment="Top" Margin="21.2,7,0,0" Height="21" FontSize="16" Width="69" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="通讯目标IP" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="235,11,0,0" TextWrapping="Wrap" Text="通讯目标端口" VerticalAlignment="Top"/>
+        <TextBox x:Name="ListenIp" HorizontalAlignment="Left" Height="23" Margin="80,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="ListenPort" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="312,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="70"/>
+        <TextBlock HorizontalAlignment="Left" Margin="14,71,0,0" TextWrapping="Wrap" Text="本地监听IP" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="235,71,0,0" TextWrapping="Wrap" Text="本地监听端口" VerticalAlignment="Top"/>
+        <Button Content="结束监听" Grid.Column="1" HorizontalAlignment="Left" Margin="201.2,72,0,0" VerticalAlignment="Top" Width="75" Click="Break_Click"/>
+        <Rectangle x:Name="LED" Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="24" Margin="36.2,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="24"/>
+
+    </Grid>
+</Window>
